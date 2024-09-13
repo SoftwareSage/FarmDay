@@ -7,37 +7,52 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
 </head>
 <body>
     <!-- Navigation -->
     <header>
         <img src="https://play-lh.googleusercontent.com/tXJYDeL7LT2LAV6SCGHzUwHKOCR8Qtk1VbfqEIl8bWDPm93NJrsAHHmoLhtTX_al5bA" alt="FarmDay Logo" class="logo" >
         <nav>
-            <ul class="nav-links" id="navList">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="features.html">Features</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="installation.html">Installation</a></li>
-                <li><a href="usage.html">Usage</a></li>
-                <li><a href="video.html">Video</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <ul class="nav-links hidden" id="navList">
+                <li><a href="index.html" data-en="Home" data-ta="முகப்பு">Home</a></li>
+                <li><a href="features.html" data-en="Features" data-ta="அம்சங்கள்">Features</a></li>
+                <li><a href="about.html" data-en="About" data-ta="பற்றி">About</a></li>
+                <li><a href="installation.html" data-en="Installation" data-ta="நிறுவல்">Installation</a></li>
+                <li><a href="usage.html" data-en="Usage" data-ta="பயன்பாடு">Usage</a></li>
+                <li><a href="video.html" data-en="Video" data-ta="வீடியோ">Video</a></li>
+                <li><a href="contact.html" data-en="Contact" data-ta="தொடர்பு கொள்ள">Contact</a></li>
+                <!-- Language Toggle Button -->
+                <li><button id="language-toggle" class="btn-language">தமிழ்</button></li>
             </ul>
         </nav>
     </header>
-    <div id="content">
-        <section id="video" class="video"></section>
-            <h2>Watch Our Introduction Video</h2>
-            <iframe src="farmvideotamil.mp4" allow="autoplay"></iframe>
-        </section>
-        <footer>
-            <p>&copy; 2024 FarmDay. All Rights Reserved.</p>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/farmday.in/" class="fab fa-facebook-f"></a>
-                <a href="https://x.com/farmday_in" class="fab fa-twitter"></a>
-                <a href="https://www.linkedin.com/company/farmday/?originalSubdomain=in" class="fab fa-linkedin-in"></a>
-                <a href="https://www.instagram.com/farmday.in/" class="fab fa-instagram"></a>
-            </div>
-        </footer>
-        <script src="script.js"></script>
-    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding-left:30%;">
+        <div class="hero-content">
+            <h1 data-en="Farm Day Mobile Application - Tutorial" data-ta="ஃபாரம் டே மொபைல் செயலி - பயிற்சி">Farm Day Mobile Application - Tutorial</h1>
+            <p data-en="Your Smart Farming Companion." data-ta="உங்கள் புத்திசாலி விவசாயக் கற்றகம்.">Your Smart Farming Companion.</p>
+           <a href="#video"><button class="btn-primary" style="padding:15px;font-size: 20px; width: 550px;" data-en="Start ->" data-ta="தொடங்கு ->">Start -></button></a> 
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="video">
+        <h2 data-en="Watch Our Introduction Video" data-ta="எங்கள் அறிமுக வீடியோவைப் பார்வையிடவும்">Watch Our Introduction Video</h2>
+        <iframe src="farmvideotamil.mp4" allow="autoplay" title="FarmDay Introduction Video" width="100%" height="480"></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 FarmDay. All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/farmday.in/" class="fab fa-facebook-f"></a>
+            <a href="https://x.com/farmday_in" class="fab fa-twitter"></a>
+            <a href="https://www.linkedin.com/company/farmday/?originalSubdomain=in" class="fab fa-linkedin-in"></a>
+            <a href="https://www.instagram.com/farmday.in/" class="fab fa-instagram"></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
