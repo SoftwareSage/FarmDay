@@ -8,17 +8,18 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Inline CSS for demonstration, should ideally be in an external stylesheet */
-        body {
-            font-family: 'Roboto', sans-serif;
+        /* Basic Reset */
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #f5f5f5;
         }
 
-        
-       
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+        }
 
         #content {
             padding: 20px;
@@ -36,10 +37,14 @@
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
+            opacity: 0; /* Start with invisible content */
+            animation: fadeIn 1s forwards; /* Apply fade-in animation */
         }
 
         .about-content {
             max-width: 600px;
+            transform: translateX(-50px);
+            animation: slideIn 1s forwards; /* Apply slide-in animation */
         }
 
         .about-content h2 {
@@ -69,11 +74,86 @@
             max-width: 100%;
             border-radius: 8px;
             height: auto;
+            opacity: 0; /* Start with invisible image */
+            transform: scale(0.8); /* Start with smaller size */
+            animation: zoomInFade 1s forwards 0.3s; /* Zoom-in and fade-in effect */
         }
 
-       
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
 
-       
+        @keyframes slideIn {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes zoomInFade {
+            0% {
+                opacity: 0;
+                transform: scale(0.2);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(0.8);
+            }
+        }
+
+        footer {
+            background-color: #323541;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .social-icons {
+            margin: 20px 0;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 15px;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #1e824c; /* Change color on hover */
+        }
+
+        .btn-language {
+            background-color: transparent;
+            border: 2px solid #007b5e;
+            color: #007b5e;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .btn-language:hover {
+            background-color: #007b5e;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -81,14 +161,16 @@
     <header>
         <img src="https://play-lh.googleusercontent.com/tXJYDeL7LT2LAV6SCGHzUwHKOCR8Qtk1VbfqEIl8bWDPm93NJrsAHHmoLhtTX_al5bA" alt="FarmDay Logo" class="logo">
         <nav>
-            <ul class="nav-links" id="navList">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="features.html">Features</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="installation.html">Installation</a></li>
-                <li><a href="usage.html">Usage</a></li>
-                <li><a href="video.html">Video</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <ul class="nav-links hidden" id="navList">
+                <li><a href="index.html" data-en="Home" data-ta="முகப்பு">Home</a></li>
+                <li><a href="features.html" data-en="Features" data-ta="அம்சங்கள்">Features</a></li>
+                <li><a href="about.html" data-en="About" data-ta="பற்றி">About</a></li>
+                <li><a href="installation.html" data-en="Installation" data-ta="நிறுவல்">Installation</a></li>
+                <li><a href="usage.html" data-en="Usage" data-ta="பயன்பாடு">Usage</a></li>
+                <li><a href="video.html" data-en="Video" data-ta="வீடியோ">Video</a></li>
+                <li><a href="contact.html" data-en="Contact" data-ta="தொடர்பு கொள்ள">Contact</a></li>
+                <!-- Language Toggle Button -->
+                <li><button id="language-toggle" class="btn-language">தமிழ்</button></li>
             </ul>
         </nav>
     </header>
@@ -97,9 +179,9 @@
     <div id="content">
         <section id="about" class="about">
             <div class="about-content">
-                <h2>About FarmDay</h2>
-                <p>FarmDay is an innovative app designed to help farmers enhance their productivity through smart technology. Our goal is to empower farmers with real-time data, advanced analytics, and easy-to-use tools.</p>
-                <a href="#" class="btn-secondary">Learn More</a>
+                <h2 data-en="About FarmDay" data-ta="எங்களை பற்றி">About FarmDay</h2>
+                <p data-en="FarmDay is dedicated to helping farmers with the latest technology." data-ta="FarmDay, சமீபத்திய தொழில்நுட்பத்துடன் விவசாயிகளுக்கு உதவ முற்படுகிறது.">FarmDay is dedicated to helping farmers with the latest technology.</p>
+                <a href="index.html" class="btn-secondary">Learn More</a>
             </div>
             <div class="about-image">
                 <img src="https://play-lh.googleusercontent.com/tXJYDeL7LT2LAV6SCGHzUwHKOCR8Qtk1VbfqEIl8bWDPm93NJrsAHHmoLhtTX_al5bA" alt="About FarmDay">
@@ -109,15 +191,15 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 FarmDay. All Rights Reserved.</p>
+        <p data-en="2024 FarmDay. All Rights Reserved." data-ta="© 2024 FarmDay. அனைத்து உரிமைகளும் பாதுகாக்கப்படுகின்றன.">&copy; 2024 FarmDay. All Rights Reserved.</p>
         <div class="social-icons">
-            <a href="https://www.facebook.com/farmday.in/" class="fab fa-facebook-f"></a>
-            <a href="https://x.com/farmday_in" class="fab fa-twitter"></a>
-            <a href="https://www.linkedin.com/company/farmday/?originalSubdomain=in" class="fab fa-linkedin-in"></a>
-            <a href="https://www.instagram.com/farmday.in/" class="fab fa-instagram"></a>
+            <a href="https://www.facebook.com/farmday.in/" class="fab fa-facebook-f" aria-label="Facebook" title="Facebook"></a>
+            <a href="https://x.com/farmday_in" class="fab fa-twitter" aria-label="Twitter" title="Twitter"></a>
+            <a href="https://www.linkedin.com/company/farmday/?originalSubdomain=in" class="fab fa-linkedin-in" aria-label="LinkedIn" title="LinkedIn"></a>
+            <a href="https://www.instagram.com/farmday.in/" class="fab fa-instagram" aria-label="Instagram" title="Instagram"></a>
         </div>
     </footer>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
