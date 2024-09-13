@@ -13,14 +13,16 @@
     <header>
         <img src="https://play-lh.googleusercontent.com/tXJYDeL7LT2LAV6SCGHzUwHKOCR8Qtk1VbfqEIl8bWDPm93NJrsAHHmoLhtTX_al5bA" alt="FarmDay Logo" class="logo">
         <nav>
-            <ul class="nav-links" id="navList">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="features.html">Features</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="installation.html">Installation</a></li>
-                <li><a href="usage.html">Usage</a></li>
-                <li><a href="video.html">Video</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <ul class="nav-links hidden" id="navList">
+                <li><a href="index.html" data-en="Home" data-ta="முகப்பு">Home</a></li>
+                <li><a href="features.html" data-en="Features" data-ta="அம்சங்கள்">Features</a></li>
+                <li><a href="about.html" data-en="About" data-ta="பற்றி">About</a></li>
+                <li><a href="installation.html" data-en="Installation" data-ta="நிறுவல்">Installation</a></li>
+                <li><a href="usage.html" data-en="Usage" data-ta="பயன்பாடு">Usage</a></li>
+                <li><a href="video.html" data-en="Video" data-ta="வீடியோ">Video</a></li>
+                <li><a href="contact.html" data-en="Contact" data-ta="தொடர்பு கொள்ள">Contact</a></li>
+                <!-- Language Toggle Button -->
+                <li><button id="language-toggle" class="btn-language">தமிழ்</button></li>
             </ul>
         </nav>
     </header>
@@ -29,52 +31,49 @@
     <div id="content">
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1>Welcome to FarmDay</h1>
-                <p>Your Smart Farming Companion to Boost Productivity and Efficiency</p>
-                <a href="https://play.google.com/store/search?q=farmday&c=apps" class="btn-primary">Get Started</a>
+                <h1 data-en="Welcome to FarmDay" data-ta="FarmDay வரவேற்கிறது">Welcome to FarmDay</h1>
+                <p data-en="Your Smart Farming Companion to Boost Productivity and Efficiency" data-ta="உங்கள் விளைபொருள் உற்பத்தி மற்றும் செயல்திறனை மேம்படுத்தும் நுண்ணறிவு முறைசார்ந்த துணை">Your Smart Farming Companion to Boost Productivity and Efficiency</p>
+                <a href="https://play.google.com/store/search?q=farmday&c=apps" class="btn-primary" data-en="Get Started" data-ta="தொடங்குங்கள்">Get Started</a>
             </div>
-            <div class="hero-image">
+            <div class="about-image">
                 <img src="https://play-lh.googleusercontent.com/tXJYDeL7LT2LAV6SCGHzUwHKOCR8Qtk1VbfqEIl8bWDPm93NJrsAHHmoLhtTX_al5bA" alt="FarmDay App" style="border-radius: 10px;">
             </div>
         </section>
+        
+        <!-- split-->>
         <section id="features" class="features">
-            <h2>Features</h2>
+            <h2 data-en="Features" data-ta="அம்சங்கள்">Features</h2>
             <div class="feature-cards">
                 <div class="feature-card">
-                    <i class="fas fa-leaf"></i>
-                    <h3>Crop Monitoring</h3>
-                    <p>Monitor your crops in real-time using advanced sensors and AI.</p>
+                    <h3 data-en="Real-time Monitoring" data-ta="நேரடி கண்காணிப்பு">Real-time Monitoring</h3>
+                    <p data-en="Monitor your fields with real-time data to make smart decisions." data-ta="நேரடி தரவு மூலம் உங்களின் புலங்களை கண்காணிக்கவும்.">Monitor your fields with real-time data to make smart decisions.</p>
                 </div>
                 <div class="feature-card">
-                    <i class="fas fa-tachometer-alt"></i>
-                    <h3>Weather Forecasts</h3>
-                    <p>Get accurate weather predictions to plan your farming activities.</p>
+                    <h3 data-en="Smart Irrigation" data-ta="நுண்ணறிவு நீர்பாசனம்">Smart Irrigation</h3>
+                    <p data-en="Automated irrigation systems based on weather conditions." data-ta="வானிலை சார்ந்த தானியங்கி நீர்பாசன முறைமைகள்.">Automated irrigation systems based on weather conditions.</p>
                 </div>
                 <div class="feature-card">
-                    <i class="fas fa-wallet"></i>
-                    <h3>Cost Management</h3>
-                    <p>Track expenses and manage your budget with ease.</p>
+                    <h3 data-en="Data Analytics" data-ta="தரவு பகுப்பாய்வு">Data Analytics</h3>
+                    <p data-en="Use advanced analytics to improve crop yields and reduce costs." data-ta="பயிர் உற்பத்தியை மேம்படுத்தவும், செலவுகளை குறைக்கவும்.">Use advanced analytics to improve crop yields and reduce costs.</p>
                 </div>
             </div>
         </section>
         <section id="about" class="about">
             <div class="about-content">
-                <h2>About FarmDay</h2>
-                <p>FarmDay is an innovative app designed to help farmers enhance their productivity through smart technology. Our goal is to empower farmers with real-time data, advanced analytics, and easy-to-use tools.</p>
-                <a href="#" class="btn-secondary">Learn More</a>
+                <h2 data-en="About Us" data-ta="எங்களை பற்றி">About Us</h2>
+                <p data-en="FarmDay is dedicated to helping farmers with the latest technology." data-ta="FarmDay, சமீபத்திய தொழில்நுட்பத்துடன் விவசாயிகளுக்கு உதவ முற்படுகிறது.">FarmDay is dedicated to helping farmers with the latest technology.</p>
             </div>
             <div class="about-image">
                 <img src="https://play-lh.googleusercontent.com/tXJYDeL7LT2LAV6SCGHzUwHKOCR8Qtk1VbfqEIl8bWDPm93NJrsAHHmoLhtTX_al5bA" alt="About FarmDay">
             </div>
         </section>
         <section id="installation" class="installation">
-            <h2>How to Install FarmDay</h2>
-            <p>Download the FarmDay app from the official app store and follow the installation instructions to get started.</p>
-            <a href="https://play.google.com/store/apps/details?id=com.farmday" class="btn-primary" target="_blank">Download Now</a>
+            <h2 data-en="Installation" data-ta="நிறுவல்">Installation</h2>
+            <p data-en="Download the FarmDay app from the app store to get started." data-ta="FarmDay செயலியை பதிவிறக்கி, பயன்படுத்தத் தொடங்குங்கள்.">Download the FarmDay app from the app store to get started.</p>
         </section>
         <section id="usage" class="usage">
-            <h2>How to Use FarmDay</h2>
-            <p>Once installed, open the app and follow the onboarding tutorial to set up your account and start monitoring your farm.</p>
+            <h2 data-en="How to Use" data-ta="பயன்படுத்துவது எப்படி">How to Use</h2>
+            <p data-en="Follow these simple steps to start using FarmDay efficiently." data-ta="FarmDay ஐ திறமையாக பயன்படுத்துவதற்கு இந்த எளிய படிகளை பின்பற்றவும்.">Follow these simple steps to start using FarmDay efficiently.</p>
             <ul>
                 <li>Log in with your credentials.</li>
                 <li>Set up your farm profile and add sensors.</li>
@@ -82,29 +81,31 @@
             </ul>
         </section>
         <section id="video" class="video">
-            <h2>Watch Our Introduction Video</h2>
+            <h2 data-en="Watch Our Video" data-ta="எங்கள் வீடியோவை பாருங்கள்">Watch Our Video</h2>
             <iframe src="farmvideotamil.mp4" allow="autoplay"></iframe>
         </section>
         <section id="contact" class="contact">
             <h2>Contact Us</h2>
             <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn-primary">Send Message</button>
+                <input type="text" placeholder="Your Name" data-en="Your Name" data-ta="உங்கள் பெயர்">
+                <input type="email" placeholder="Your Email" data-en="Your Email" data-ta="உங்கள் மின்னஞ்சல்">
+                <textarea placeholder="Your Message" data-en="Your Message" data-ta="உங்கள் செய்தி"></textarea>
+                <button type="submit" class="btn-primary" data-en="Send" data-ta="அனுப்புக">Send</button>
             </form>
         </section>
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 FarmDay. All Rights Reserved.</p>
+        <p data-en="2024 FarmDay. All Rights Reserved." data-ta="© 2024 FarmDay. அனைத்து உரிமைகளும் பாதுகாக்கப்படுகின்றன.">&copy; 2024 FarmDay. All Rights Reserved.</p>
         <div class="social-icons">
             <a href="https://www.facebook.com/farmday.in/" class="fab fa-facebook-f"></a>
             <a href="https://x.com/farmday_in" class="fab fa-twitter"></a>
             <a href="https://www.linkedin.com/company/farmday/?originalSubdomain=in" class="fab fa-linkedin-in"></a>
             <a href="https://www.instagram.com/farmday.in/" class="fab fa-instagram"></a>
         </div>
+
+       
     </footer>
 
     <!-- JavaScript -->
